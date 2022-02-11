@@ -1,6 +1,10 @@
 # Flexible-Tool
 
-![A sketch of the first target system](photos_and_figures/starting_system_diagram.png, "System Diagram")
+![A sketch of the first target system](photos_and_figures/starting_system_diagram.png)
+
+
+![A sketch of the first target system](photos_and_figures/test.png)
+
 This repo contains code relating to the flexible tool experiment. We aim to
 have a robot automatically design a wire-based tool and then use it for simple
 manipulation tasks. 
