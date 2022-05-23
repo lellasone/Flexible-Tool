@@ -1,0 +1,21 @@
+Failure # 1 (occurred at 2022-05-22_22-19-55)
+Traceback (most recent call last):
+  File "/home/jake/.local/lib/python3.8/site-packages/ray/tune/ray_trial_executor.py", line 901, in get_next_executor_event
+    future_result = ray.get(ready_future)
+  File "/home/jake/.local/lib/python3.8/site-packages/ray/_private/client_mode_hook.py", line 105, in wrapper
+    return func(*args, **kwargs)
+  File "/home/jake/.local/lib/python3.8/site-packages/ray/worker.py", line 1811, in get
+    raise value
+ray.exceptions.RayActorError: The actor died because of an error raised in its creation task, [36mray::PPOTrainer.__init__()[39m (pid=75116, ip=192.168.0.154, repr=PPOTrainer)
+  File "/home/jake/.local/lib/python3.8/site-packages/ray/rllib/agents/trainer.py", line 830, in __init__
+    super().__init__(
+  File "/home/jake/.local/lib/python3.8/site-packages/ray/tune/trainable.py", line 149, in __init__
+    self.setup(copy.deepcopy(self.config))
+  File "/home/jake/.local/lib/python3.8/site-packages/ray/rllib/agents/trainer.py", line 850, in setup
+    self.validate_framework(self.config)
+  File "/home/jake/.local/lib/python3.8/site-packages/ray/rllib/agents/trainer.py", line 2303, in validate_framework
+    check_if_correct_nn_framework_installed()
+  File "/home/jake/.local/lib/python3.8/site-packages/ray/rllib/agents/trainer.py", line 2262, in check_if_correct_nn_framework_installed
+    raise ImportError(
+ImportError: PyTorch was specified as the 'framework' inside of your config dictionary. However, there was no installation found. You can install PyTorch via `pip install torch`
+
